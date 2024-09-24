@@ -27,46 +27,17 @@ python combine_json.py
 
 *** Example JSON files are included in the project named file1.json and file2.json
 
-Enter the name of the first JSON file: file1.json
-Enter the name of the second JSON file: file2.json
-Enter the name for the output JSON file: output.json
-
-Would you like to create a container object for the merged data? (yes/no):
-yes
-
-Enter the name for the container object:
-person
-
-Merged JSON data has been written to output.json
-
-
-
-
 ---------------------------------------------------------------
 #Example Interaction with program
 
 Enter the name of the first JSON file: file1.json 
 
-Contents of file1.json:
-{
-    "name": "Alice",
-    "age": 30,
-    "country": "Switzerland",
-    "citizen": "false"
-}
-
 Enter the name of the second JSON file: file2.json 
 
-Contents of file2.json:
-{
-    "name": "Bob",
-    "age": 25,
-    "state": "California",
-    "country": "USA"
-}
-
 Enter the name for the output JSON file: output.json
+
 Would you like to create a container object for the merged data? (yes/no): yes
+
 Enter the name for the container object: person
 
 Contents of file1.json:
