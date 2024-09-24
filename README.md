@@ -29,6 +29,12 @@ Enter the name of the first JSON file: file1.json
 Enter the name of the second JSON file: file2.json
 Enter the name for the output JSON file: output.json
 
+Would you like to create a container object for the merged data? (yes/no):
+yes
+
+Enter the name for the container object:
+person
+
 Merged JSON data has been written to output.json
 
 
@@ -43,7 +49,7 @@ file1.json
 {
     "name": "Alice",
     "age": 30,
-    "city": "New York"
+    "country": "Switzerland"
 }
 
 
