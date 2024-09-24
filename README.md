@@ -23,7 +23,13 @@ A simple Python application that combines two JSON files into one. This tool rea
 Run the script from the command line with the following syntax:
 
 ```bash
-python combine_json.py <file1.json> <file2.json> <output.json>
+python combine_json.py
+
+Enter the name of the first JSON file: file1.json
+Enter the name of the second JSON file: file2.json
+Enter the name for the output JSON file: output.json
+
+
 
 ---------------------------------------------------------------
 #Example Inputs
