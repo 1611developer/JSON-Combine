@@ -29,6 +29,9 @@ Enter the name of the first JSON file: file1.json
 Enter the name of the second JSON file: file2.json
 Enter the name for the output JSON file: output.json
 
+Merged JSON data has been written to output.json
+
+
 
 
 ---------------------------------------------------------------
