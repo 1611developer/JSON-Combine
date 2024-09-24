@@ -14,28 +14,22 @@ def ensure_same_keys_and_order(obj1, obj2):
 
     return ordered_obj1, ordered_obj2
 
+def load_and_display_json(file_path):
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+        print(f"\nContents of {file_path}:")
+        print(json.dumps(data, indent=4))
+        return data
+    except FileNotFoundError:
+        print(f"Error: The file {file_path} was not found.")
+        return None
+    except json.JSONDecodeError:
+        print(f"Error: The file {file_path} is not a valid JSON.")
+        return None
+
 def merge_json_files(file1, file2, output_file, container_name=None):
-    try:
-        with open(file1, 'r') as f1:
-            data1 = json.load(f1)
-    except FileNotFoundError:
-        print(f"Error: The file {file1} was not found.")
-        return
-    except json.JSONDecodeError:
-        print(f"Error: The file {file1} is not a valid JSON.")
-        return
-
-    try:
-        with open(file2, 'r') as f2:
-            data2 = json.load(f2)
-    except FileNotFoundError:
-        print(f"Error: The file {file2} was not found.")
-        return
-    except json.JSONDecodeError:
-        print(f"Error: The file {file2} is not a valid JSON.")
-        return
-
-    data1, data2 = ensure_same_keys_and_order(data1, data2)
+    data1, data2 = ensure_same_keys_and_order(file1, file2)
 
     if container_name:
         merged_data = {container_name: [data1, data2]}
@@ -60,9 +54,19 @@ if __name__ == "__main__":
 
     if create_container in ['yes', 'y']:
         container_name = input("Enter the name for the container object: ")
-        merged_data = merge_json_files(file1, file2, output_file, container_name)
     else:
-        merged_data = merge_json_files(file1, file2, output_file)
+        container_name = None
+
+    # Display contents of both files
+    data1 = load_and_display_json(file1)
+    if data1 is None:
+        exit(1)
+
+    data2 = load_and_display_json(file2)
+    if data2 is None:
+        exit(1)
+
+    merged_data = merge_json_files(data1, data2, output_file, container_name)
 
     if merged_data is not None:
         print("\nMerged JSON data:")
