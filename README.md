@@ -11,7 +11,7 @@ A simple Python application that combines two JSON files into one. This tool rea
 
 ## Requirements
 
-- Python 3.12 or later
+- Python 3.6 or later
 
 ## Installation
 
