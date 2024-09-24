@@ -45,13 +45,16 @@ Merged JSON data has been written to output.json
 ---------------------------------------------------------------
 #Example Inputs
 
+Notice they both have at least one Key-Value pair that the other JSON file doesn't have. The Program will combine any missing keys the other JSON file object doesn't have and will leave the value blank.
+
 
 file1.json
 
 {
     "name": "Alice",
     "age": 30,
-    "country": "Switzerland"
+    "country": "Switzerland",
+    "citizen": "false"
 }
 
 
@@ -60,6 +63,7 @@ file2.json
 {
     "name": "Bob",
     "age": 25,
+    "state": "California",
     "country": "USA"
 }
 
