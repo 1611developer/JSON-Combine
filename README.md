@@ -16,7 +16,7 @@ A simple Python application that combines two JSON files into one. This tool rea
 ## Installation
 
 1. Clone the repository or download the source code.
-2. This script requires Python 3.6 or newer. The latest version (3.12 as of this writing) is recommended, but any version 3.6 or above should work.
+2. This script requires Python 3.6 or newer. The latest version (3.13 as of this writing) is recommended, but any version 3.6 or above should work.
 
 ## Usage
 
