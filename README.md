@@ -45,10 +45,6 @@ Merged JSON data has been written to output.json
 ---------------------------------------------------------------
 #Example Inputs
 
-Notice they both have at least one Key-Value pair that the other JSON file doesn't have. The Program will combine any missing keys the other JSON file object doesn't have and will leave the value blank.
-
-It will also ask you if you would like to create a container object for the merged data. 
-
 
 file1.json
 
@@ -90,3 +86,10 @@ file2.json
         }
     ]
 }
+
+
+------------------------------------------------------------------------------------------------------------
+
+Notice they both have at least one Key-Value pair that the other JSON file doesn't have. The Program will combine any missing keys the other JSON file object doesn't have and will leave the value blank.
+
+It also asks you if you would like to create a container object for the merged data. 
