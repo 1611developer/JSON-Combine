@@ -25,6 +25,8 @@ Run the script from the command line with the following syntax:
 ```bash
 python combine_json.py
 
+*** Example JSON files are included in the project named file1.json and file2.json
+
 Enter the name of the first JSON file: file1.json
 Enter the name of the second JSON file: file2.json
 Enter the name for the output JSON file: output.json
