@@ -43,11 +43,11 @@ Merged JSON data has been written to output.json
 
 
 ---------------------------------------------------------------
-#Example Inputs
+#Example Interaction with program
 
+Enter the name of the first JSON file: file1.json 
 
-file1.json
-
+Contents of file1.json:
 {
     "name": "Alice",
     "age": 30,
@@ -55,9 +55,9 @@ file1.json
     "citizen": "false"
 }
 
+Enter the name of the second JSON file: file2.json 
 
-file2.json
-
+Contents of file2.json:
 {
     "name": "Bob",
     "age": 25,
@@ -65,9 +65,27 @@ file2.json
     "country": "USA"
 }
 
+Enter the name for the output JSON file: output.json
+Would you like to create a container object for the merged data? (yes/no): yes
+Enter the name for the container object: person
 
-#Example Expected Output
+Contents of file1.json:
+{
+    "name": "Alice",
+    "age": 30,
+    "country": "Switzerland",
+    "citizen": "false"
+}
 
+Contents of file2.json:
+{
+    "name": "Bob",
+    "age": 25,
+    "state": "California",
+    "country": "USA"
+}
+
+Merged JSON data:
 {
     "person": [
         {
@@ -86,6 +104,11 @@ file2.json
         }
     ]
 }
+
+Merged data has been written to output.json
+File size: 370 bytes
+Script execution completed.
+
 
 
 ------------------------------------------------------------------------------------------------------------
