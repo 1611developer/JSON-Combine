@@ -55,13 +55,3 @@ file2.json
     "city": "New York",
     "country": "USA"
 }
-
-
-
-
-
-
-
-
-
-
