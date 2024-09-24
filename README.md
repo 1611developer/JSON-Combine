@@ -71,18 +71,18 @@ file2.json
 {
     "person": [
         {
-            "name": "Alice",
             "age": 30,
-            "country": "Switzerland",
             "citizen": "false",
+            "country": "Switzerland",
+            "name": "Alice",
             "state": ""
         },
         {
-            "name": "Bob",
             "age": 25,
-            "state": "California",
+            "citizen": "",
             "country": "USA",
-            "citizen": ""
+            "name": "Bob",
+            "state": "California"
         }
     ]
 }
