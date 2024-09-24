@@ -1,7 +1,8 @@
 # Merge-JSON
 Combine two JSON files into one
 
-A simple Python application that combines two JSON files into one. This tool reads two input JSON files, merges their contents, and outputs the combined data to a new JSON file.
+A simple Python application that combines two JSON files into one. This tool reads two input JSON files,
+merges their contents, and outputs the combined data to a new JSON file.
 
 ## Features
 
