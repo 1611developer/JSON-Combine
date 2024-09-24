@@ -23,7 +23,24 @@ A simple Python application that combines two JSON files into one. This tool rea
 Run the script from the command line with the following syntax:
 
 ```bash
-python combine_json.py <file1.json> <file2.json> <output.json>
+python combine_json.py
+
+*** Example JSON files are included in the project named file1.json and file2.json
+
+Enter the name of the first JSON file: file1.json
+Enter the name of the second JSON file: file2.json
+Enter the name for the output JSON file: output.json
+
+Would you like to create a container object for the merged data? (yes/no):
+yes
+
+Enter the name for the container object:
+person
+
+Merged JSON data has been written to output.json
+
+
+
 
 ---------------------------------------------------------------
 #Example Inputs
@@ -34,7 +51,8 @@ file1.json
 {
     "name": "Alice",
     "age": 30,
-    "city": "New York"
+    "country": "Switzerland",
+    "citizen": "false"
 }
 
 
@@ -43,6 +61,7 @@ file2.json
 {
     "name": "Bob",
     "age": 25,
+    "state": "California",
     "country": "USA"
 }
 
@@ -50,8 +69,27 @@ file2.json
 #Example Expected Output
 
 {
-    "name": "Bob",
-    "age": 25,
-    "city": "New York",
-    "country": "USA"
+    "person": [
+        {
+            "age": 30,
+            "citizen": "false",
+            "country": "Switzerland",
+            "name": "Alice",
+            "state": ""
+        },
+        {
+            "age": 25,
+            "citizen": "",
+            "country": "USA",
+            "name": "Bob",
+            "state": "California"
+        }
+    ]
 }
+
+
+------------------------------------------------------------------------------------------------------------
+
+Notice they both have at least one Key-Value pair that the other JSON file does not have. The program will combine any missing keys the other JSON file object does not have and will leave the value blank.
+
+It also asks you if you would like to create a container object for the merged data. 
