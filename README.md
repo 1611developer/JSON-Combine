@@ -47,6 +47,8 @@ Merged JSON data has been written to output.json
 
 Notice they both have at least one Key-Value pair that the other JSON file doesn't have. The Program will combine any missing keys the other JSON file object doesn't have and will leave the value blank.
 
+It will also ask you if you would like to create a container object for the merged data. 
+
 
 file1.json
 
@@ -71,8 +73,20 @@ file2.json
 #Example Expected Output
 
 {
-    "name": "Bob",
-    "age": 25,
-    "city": "New York",
-    "country": "USA"
+    "person": [
+        {
+            "name": "Alice",
+            "age": 30,
+            "country": "Switzerland",
+            "citizen": "false",
+            "state": ""
+        },
+        {
+            "name": "Bob",
+            "age": 25,
+            "state": "California",
+            "country": "USA",
+            "citizen": ""
+        }
+    ]
 }
